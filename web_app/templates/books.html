@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>Subheading</h2>
+{% extends "bootstrap_layout.html" %}
+{% set active_page = "books" %}
 
-    <title>Books Page</title>
+{% block content %}
 
-    <h2>Welcome to the Books Page</h2>
+    <h1>My Books Page</h1>
 
     <p>{{ message }}</p>
 
@@ -20,9 +13,8 @@
             <li>{{ book.title }}</li>
         {% endfor %}
         </ul>
-
     {% else %}
         <p>Books not found.</p>
     {% endif %}
-</body>
-</html>
+
+{% endblock %}
